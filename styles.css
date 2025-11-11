@@ -1,0 +1,423 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header{
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 0%;
+    display: flex;
+    background-color: rgb(114, 1, 1);
+    color: white;
+}
+
+.logo{
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.logo img{
+    width: 100px;
+}
+
+nav{
+   color: white;
+    margin-left: 10px;
+    margin-right: 0px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    padding: 15px 80px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+nav a:hover{
+transform: scale(1.1);
+color:rgb(255, 255, 157);
+padding: 1px;
+}
+
+.productosdestacados{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
+
+.producto3{
+    box-shadow:  0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px 7px;
+    transition: transform 0.3s;
+}
+
+.producto3:hover{
+    transform: scale(1.1);
+}
+
+.producto3 img{
+    width: 200px;
+    height: auto;
+}
+
+.producto1 img{
+     width: 200px;
+    height: auto;
+}
+
+.producto1{
+   box-shadow:  0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px 7px; 
+    transition: transform 0.3s;
+}
+
+.producto1:hover{
+    transform: scale(1.1);
+}
+
+.producto2 img{
+    width: 200px;
+    height: auto;
+}
+
+.producto2{
+    box-shadow:  0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px 7px;
+    transition: transform 0.3s;
+}
+
+.producto2:hover{
+    transform: scale(1.1);
+}
+
+h2{
+    color: rgb(114, 1, 1);
+}
+
+h3{
+    text-align: center;
+}
+
+h4{
+    color:rgb(114, 1, 1) ;
+}
+
+.Producto:active{
+transform: scale(0.85);
+}
+
+.Producto{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.Nosotros{
+    text-align: center;
+}
+
+.redes a{
+text-decoration: none;
+}
+.redes i{
+    font-style: normal;
+}
+
+.registro{
+    background-color: white;
+    max-width: 400px;
+    margin: 3em auto;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.registro h2{
+    color:rgb(114, 1, 1);
+    text-align: center;
+}
+.registro p{
+    text-align: center;
+}
+
+label{
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.checkbox{
+    align-items: center;
+    text-align: left;
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+button{
+    margin-top: 20px;
+    background-color:  rgb(114, 1, 1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+button:hover{
+    background-color: #9f1e19;
+}
+
+.Registrarse:active{
+transform: scale(0.85);
+}
+
+.login {
+  background-color: white;
+  max-width: 400px;
+  margin: 3em auto;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login h2 {
+  margin-bottom: 10px;
+}
+
+.login p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.label2 {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.input2 {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+.button2:hover {
+  background-color: #004080;
+}
+
+.registro-link {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.registro-link a {
+  color: #002b5c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.registro-link a:hover {
+  text-decoration: underline;
+}
+
+.producto4{
+  display: flex;
+  align-items: center;
+}
+.producto4 img{
+  width: 150px;
+  height: auto;
+}
+
+.tarjeta1 img, .tarjeta2 img, .tarjeta3 img, .tarjeta4 img, .tarjeta5 img, .tarjeta6 img{
+  padding-bottom: 100px;
+}
+
+.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4, .tarjeta5, .tarjeta6{
+  padding-right: 10px;
+   width: 800px;
+  height: 250px;
+  margin: 20px auto;
+  box-shadow:  0 0 15px rgba(0, 0, 0, 0.3);
+   transition: transform 0.3s;
+  
+}
+.tarjeta1:hover, .tarjeta2:hover, .tarjeta3:hover, .tarjeta4:hover, .tarjeta5:hover, .tarjeta6:hover{
+  transform: scale(1.01);
+}
+
+.tarjeta1 p, .tarjeta2 p, .tarjeta3 p, .tarjeta4 p, .tarjeta5 p, .tarjeta6 p{
+   padding-left: 30px;
+  margin-bottom: 100px;
+}
+
+.tarjeta1 h4, .tarjeta2 h4, .tarjeta3 h4, .tarjeta4 h4, .tarjeta5 h4, .tarjeta6 h4{
+   text-align: center;
+  display: block;      
+  width: 100%;
+  padding-top: 5px;
+}
+
+.servicios{
+  text-align: center;
+  padding: 30px;
+}
+
+.servicios h2{
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.servicios p{
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.caja {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  max-width: 350px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.caja img{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.caja:hover{
+  transform: translateY(-5px);
+  box-sizing: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-contacto {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.horario {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 60%;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.horario th {
+  background-color: #9f1e19;
+  color: white;
+  padding: 10px;
+}
+
+.horario td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+footer {
+  background-color: rgb(114, 1, 1); 
+  color: white;
+  width: 100%;
+  padding: 2px 0;
+  padding-top: px;
+  margin-top: 150px;
+}
+
+footer .redes {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 25px; 
+}
+
+footer .redes a {
+  color: white;
+  font-size: 1em;
+}
+
+footer .redes a:hover {
+  color: #ffcccb;
+  transform: scale(1.2);
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.mapa{
+  border: solid 2px;
+  display: inline-block;
+}
+
+@media (max-width: 768px){
+    header{
+        font-size: 1.2em;
+    }
+
+    nav a{
+        padding: 10px;
+    }
+
+    .caja{
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px){
+
+    nav{
+        flex-direction: column; 
+    }
+
+    nav a{
+        text-align: center;
+    }
+
+    header{
+        font-size: 1em;
+        padding: 15px 15px;
+    }
+}
