@@ -106,7 +106,10 @@ padding: 1px;
 .producto2:hover{
     transform: scale(1.1);
 }
-
+.txtlogo{
+  text-decoration: none;
+  color:whitesmoke;
+}
 h2{
     color: rgb(114, 1, 1);
 }
