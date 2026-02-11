@@ -1,179 +1,289 @@
+/* =========================================
+   1. RESET GLOBAL Y ESTRUCTURA
+   ========================================= */
+* {
+    box-sizing: border-box; 
+}
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    height: 100%;
+    
+    /* STICKY FOOTER: Esto asegura que el footer siempre vaya al final */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
 }
 
-header{
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2%;
-    padding-right: 0%;
-    display: flex;
-    background-color: rgb(114, 1, 1);
-    color: white;
+main {
+    flex: 1; /* Empuja el footer hacia abajo si hay poco contenido */
+    width: 100%;
 }
 
-.logo{
-display: flex;
-align-items: center;
-gap: 15px;
-}
-
-.logo img{
-    width: 100px;
-}
-
-nav{
-   color: white;
-    margin-left: 10px;
-    margin-right: 0px;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    gap: 20px;
-    padding: 15px 80px;
-}
-nav a{
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    transition: transform 0.3s;
-}
-
-nav a:hover{
-transform: scale(1.1);
-color:rgb(255, 255, 157);
-padding: 1px;
-}
-
-.productosdestacados{
-    display: flex;
-    gap: 80px;
-    justify-content: center;
-    padding-bottom: 75px;
-}
-
-.producto3{
-    box-shadow:  0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 0px 7px;
-    transition: transform 0.3s;
-}
-
-.producto3:hover{
-    transform: scale(1.1);
-}
-
-.producto3 img{
-    width: 200px;
-    height: auto;
-}
-
-.producto1 img{
-     width: 200px;
-    height: auto;
-}
-
-.producto1{
-   box-shadow:  0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 0px 7px; 
-    transition: transform 0.3s;
-}
-
-.producto1:hover{
-    transform: scale(1.1);
-}
-
-.producto2 img{
-    width: 200px;
-    height: auto;
-}
-
-.producto2{
-    box-shadow:  0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 0px 7px;
-    transition: transform 0.3s;
-}
-
-.producto2:hover{
-    transform: scale(1.1);
-}
-.txtlogo{
-  text-decoration: none;
-  color:whitesmoke;
-}
-h2{
+h1, h2, h3, h4 {
     color: rgb(114, 1, 1);
 }
 
-h3{
+img {
+    max-width: 100%;
+}
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: rgb(114, 1, 1);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.logo h1 {
+    color: whitesmoke;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.txtlogo {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 157);
+}
+
+/* =========================================
+   3. PÁGINA INICIO (Index)
+   ========================================= */
+.Nosotros {
     text-align: center;
-    font-size: 38px;
+    padding: 40px 20px;
+    background-color: whitesmoke;
 }
 
-.txtcaja{
-  font-size: 29px;
-}
-h4{
-    color:rgb(114, 1, 1) ;
-}
-
-.Producto:active{
-transform: scale(0.85);
+.Nosotros h1 {
+    font-size: 3em; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.Producto{
-    display: inline-block;
-    margin-bottom: 10px;
+.Nosotros p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
-.Nosotros{
+.titulo-seccion {
     text-align: center;
+    font-size: 2.2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: rgb(114, 1, 1);
+}
+.Pdestac{
+    margin: 0 auto;
+    font-size: 24px;
+}
+.productosdestacados {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 75px;
 }
 
-.redes a{
-text-decoration: none;
-}
-.redes i{
-    font-style: normal;
-}
-
-.registro{
+.producto1, .producto2, .producto3 {
     background-color: white;
-    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    width: 300px;
+    max-width: 100%;
+}
+
+.producto1:hover, .producto2:hover, .producto3:hover {
+    transform: scale(1.05);
+}
+
+.producto1 img, .producto2 img, .producto3 img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+.Producto {
+    background-color: rgb(114, 1, 1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* =========================================
+   4. PÁGINA SERVICIOS
+   ========================================= */
+.servicios {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.servicios h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.servicios p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.caja {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 300px; 
+    flex-grow: 1; 
+    max-width: 350px; 
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+}
+
+.caja img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.txtcaja {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: rgb(114, 1, 1);
+}
+
+/* =========================================
+   5. PÁGINA PRODUCTOS (Lista)
+   ========================================= */
+.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4, .tarjeta5, .tarjeta6 {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.tarjeta1 h4, .tarjeta2 h4, .tarjeta3 h4, 
+.tarjeta4 h4, .tarjeta5 h4, .tarjeta6 h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.producto4 {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+.producto4 img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.producto4 p {
+    flex: 1;
+    margin: 0;
+}
+
+/* =========================================
+   6. FORMULARIOS (LOGIN Y REGISTRO)
+   ========================================= */
+.registro, .login {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
     margin: 3em auto;
     padding: 2em;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.registro h2{
-    color:rgb(114, 1, 1);
-    text-align: center;
-}
-.registro p{
     text-align: center;
 }
 
-label{
-    display: block;
-    text-align: left;
-    margin-top: 15px;
-    font-weight: bold;
+.registro h2, .login h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+/* Inputs de texto ocupan todo el ancho */
+input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -181,259 +291,215 @@ input[type="password"] {
     border-radius: 6px;
 }
 
-.checkbox{
-    align-items: center;
-    text-align: left;
-    margin-top: 15px;
-    display: flex;
-    gap: 8px;
-}
-
-button{
+button {
     margin-top: 20px;
-    background-color:  rgb(114, 1, 1);
+    background-color: rgb(114, 1, 1);
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* --- SOLUCIÓN MIXTA PARA ETIQUETAS --- */
+
+/* A) Todos los LABELS normales se van a la izquierda y ocupan su propia línea */
+.registro label, .login label {
+    display: block;       /* Rompe la línea */
+    text-align: left;     /* Alinea a la izquierda */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(114, 1, 1);
+}
+
+/* B) EXCEPCIÓN: El contenedor del Checkbox */
+/* Asegúrate de usar <div class="checkbox"> en tu HTML alrededor del input y label */
+.registro .checkbox {
+    display: flex;        /* Pone cuadradito y texto en fila */
+    align-items: center;  /* Centra verticalmente */
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* C) EXCEPCIÓN: El label DENTRO del checkbox se comporta normal */
+.registro .checkbox label {
+    display: inline;      /* Se queda en la misma línea */
+    font-weight: normal;  /* Sin negrita */
+    margin: 0;            /* Sin márgenes extra */
+    color: black;
+    width: auto;
+}
+
+/* D) El cuadradito del checkbox tamaño natural */
+.registro .checkbox input {
+    width: auto;
+    margin: 0;
+}
+
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+    background-color: rgb(114, 1, 1);
+    color: white;
+    padding: 30px 0;
+    margin-top: auto; 
+    text-align: center;
+    width: 100%;
+}
+
+/* Alineación Perfecta de Iconos y Guiones */
+footer .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 15px; 
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+}
+
+footer .redes a, footer .redes span {
+    color: white;
+    text-decoration: none;
     font-size: 1em;
 }
 
-button:hover{
-    background-color: #9f1e19;
-}
-
-.Registrarse:active{
-transform: scale(0.85);
-}
-
-.login {
-  background-color: white;
-  width: 500px;
-  height: 400;
-  margin: 3em auto;
-  padding: 2em;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.login h2 {
-  margin-bottom: 10px;
-}
-
-.login p {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.label2 {
-  display: block;
-  text-align: left;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-.input2 {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-
-.button2:hover {
-  background-color: #004080;
-}
-
-.registro-link {
-  margin-top: 20px;
-  font-size: 0.9em;
-}
-
-.registro-link a {
-  color: #002b5c;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.registro-link a:hover {
-  text-decoration: underline;
-}
-
-.producto4{
-  display: flex;
-  align-items: center;
-}
-.producto4 img{
-  width: 150px;
-  height: auto;
-}
-
-.tarjeta1 img, .tarjeta2 img, .tarjeta3 img, .tarjeta4 img, .tarjeta5 img, .tarjeta6 img{
-  padding-bottom: 100px;
-}
-
-.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4, .tarjeta5, .tarjeta6{
-  padding-right: 10px;
-   width: 800px;
-  height: 250px;
-  margin: 20px auto;
-  box-shadow:  0 0 15px rgba(0, 0, 0, 0.3);
-   transition: transform 0.3s;
-  
-}
-.tarjeta1:hover, .tarjeta2:hover, .tarjeta3:hover, .tarjeta4:hover, .tarjeta5:hover, .tarjeta6:hover{
-  transform: scale(1.01);
-}
-
-.tarjeta1 p, .tarjeta2 p, .tarjeta3 p, .tarjeta4 p, .tarjeta5 p, .tarjeta6 p{
-   padding-left: 30px;
-  margin-bottom: 100px;
-}
-
-.tarjeta1 h4, .tarjeta2 h4, .tarjeta3 h4, .tarjeta4 h4, .tarjeta5 h4, .tarjeta6 h4{
-   text-align: center;
-  display: block;      
-  width: 100%;
-  padding-top: 5px;
-}
-
-.servicios{
-  text-align: center;
-  padding: 30px;
-}
-
-.servicios h2{
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.servicios p{
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
-
-.contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 70px;
-  margin-top: 60px;
-}
-
-.caja {
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  max-width: 350px;
-  padding: 20px;
-  text-align: center;
-  flex: 1 1 300px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.caja img{
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.caja:hover{
-  transform: translateY(-5px);
-  box-sizing: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
+/* =========================================
+   8. PÁGINA CONTACTO
+   ========================================= */
 .info-contacto {
-  text-align: center;
-  margin-top: 40px;
+    background-color: white;
+    width: 90%;
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.info-contacto h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: rgb(114, 1, 1);
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }
 
 .horario {
-  margin: 20px auto;
-  border-collapse: collapse;
-  width: 60%;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 30px auto; 
+    border-collapse: collapse; 
+    width: 100%;
+    max-width: 500px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.horario th, .horario td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
 }
 
 .horario th {
-  background-color: #9f1e19;
-  color: white;
-  padding: 10px;
+    background-color: rgb(114, 1, 1);
+    color: white;
+    font-weight: bold;
 }
 
-.horario td {
-  border: 1px solid #ddd;
-  padding: 10px;
+.horario tr:nth-child(even) {
+    background-color: #f9f9f9; 
 }
 
-footer {
-  background-color: rgb(114, 1, 1); 
-  color: white;
-  width: 100%;
-  padding: 2px 0;
-  padding-top: px;
-  margin-top: auto;
+.mapa {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-footer .redes {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  gap: 25px; 
+.mapa iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
 }
 
-footer .redes a {
-  color: white;
-  font-size: 1em;
-}
-
-footer .redes a:hover {
-  color: #ffcccb;
-  transform: scale(1.2);
-}
-
-footer p {
-  text-align: center;
-  font-size: 0.9em;
-}
-
-.mapa{
-  border: solid 2px;
-  display: inline-block;
-}
-
-@media (max-width: 768px){
-    header{
-        font-size: 1.2em;
+/* =========================================
+   9. MEDIA QUERIES (MÓVIL)
+   ========================================= */
+@media (max-width: 900px) {
+    .caja {
+        width: 45%; 
+        max-width: none; 
     }
+    nav { gap: 10px; }
+}
 
-    nav a{
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
         padding: 10px;
     }
 
-    .caja{
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px){
-
-    nav{
-        flex-direction: column; 
+    nav {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
     }
 
-    nav a{
+    nav a {
+        display: block;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-bottom: 5px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        flex-direction: column;
         text-align: center;
     }
 
-    header{
-        font-size: 1em;
-        padding: 15px 15px;
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
     }
+
+    .caja {
+        width: 100% !important; 
+        margin-bottom: 20px;
+    }
+
+    .producto4 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .producto4 img {
+        width: 60%;
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
+    
+    .info-contacto {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .mapa iframe {
+        height: 250px; 
+    }
+    
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    .Nosotros h1 { font-size: 2em; }
 }
-
-
