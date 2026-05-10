@@ -1,6 +1,6 @@
-/* =========================================
-   1. RESET GLOBAL Y ESTRUCTURA
-   ========================================= */
+
+   
+   
 * {
     box-sizing: border-box; 
 }
@@ -11,14 +11,14 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     
-    /* STICKY FOOTER: Esto asegura que el footer siempre vaya al final */
+    /*footer pegado al fondo*/
     min-height: 100vh; 
     display: flex;
     flex-direction: column;
 }
 
 main {
-    flex: 1; /* Empuja el footer hacia abajo si hay poco contenido */
+    flex: 1;
     width: 100%;
 }
 
@@ -30,9 +30,9 @@ img {
     max-width: 100%;
 }
 
-/* =========================================
-   2. HEADER Y NAVEGACIÓN
-   ========================================= */
+
+  /* HEADER Y NAVEGACIÓN */
+   
 header {
     background-color: rgb(114, 1, 1);
     color: white;
@@ -84,9 +84,7 @@ nav a:hover {
     color: rgb(255, 255, 157);
 }
 
-/* =========================================
-   3. PÁGINA INICIO (Index)
-   ========================================= */
+/*  Index */
 .Nosotros {
     text-align: center;
     padding: 40px 20px;
@@ -158,9 +156,7 @@ nav a:hover {
     display: inline-block;
 }
 
-/* =========================================
-   4. PÁGINA SERVICIOS
-   ========================================= */
+/*  servicios  */
 .servicios {
     text-align: center;
     padding: 30px 20px;
@@ -215,9 +211,7 @@ nav a:hover {
     color: rgb(114, 1, 1);
 }
 
-/* =========================================
-   5. PÁGINA PRODUCTOS (Lista)
-   ========================================= */
+/*   productos */
 .tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4, .tarjeta5, .tarjeta6 {
     background-color: white;
     width: 90%;
@@ -263,9 +257,7 @@ nav a:hover {
     margin: 0;
 }
 
-/* =========================================
-   6. FORMULARIOS (LOGIN Y REGISTRO)
-   ========================================= */
+/*formularios*/
 .registro, .login {
     background-color: white;
     width: 90%;
@@ -282,7 +274,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Inputs de texto ocupan todo el ancho */
+
 input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -303,47 +295,44 @@ button {
     width: 100%;
 }
 
-/* --- SOLUCIÓN MIXTA PARA ETIQUETAS --- */
 
-/* A) Todos los LABELS normales se van a la izquierda y ocupan su propia línea */
+
+
 .registro label, .login label {
-    display: block;       /* Rompe la línea */
-    text-align: left;     /* Alinea a la izquierda */
+    display: block;       
+    text-align: left;     
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: bold;
     color: rgb(114, 1, 1);
 }
 
-/* B) EXCEPCIÓN: El contenedor del Checkbox */
-/* Asegúrate de usar <div class="checkbox"> en tu HTML alrededor del input y label */
+
 .registro .checkbox {
-    display: flex;        /* Pone cuadradito y texto en fila */
-    align-items: center;  /* Centra verticalmente */
+    display: flex;        
+    align-items: center;  
     justify-content: flex-start;
     margin-top: 20px;
     gap: 10px;
 }
 
-/* C) EXCEPCIÓN: El label DENTRO del checkbox se comporta normal */
+
 .registro .checkbox label {
-    display: inline;      /* Se queda en la misma línea */
-    font-weight: normal;  /* Sin negrita */
-    margin: 0;            /* Sin márgenes extra */
+    display: inline;      
+    font-weight: normal;  
+    margin: 0;            
     color: black;
     width: auto;
 }
 
-/* D) El cuadradito del checkbox tamaño natural */
+
 .registro .checkbox input {
     width: auto;
     margin: 0;
 }
 
 
-/* =========================================
-   7. FOOTER
-   ========================================= */
+/* footer */
 footer {
     background-color: rgb(114, 1, 1);
     color: white;
@@ -353,11 +342,11 @@ footer {
     width: 100%;
 }
 
-/* Alineación Perfecta de Iconos y Guiones */
+
 footer .redes {
     display: flex;
     justify-content: center;
-    align-items: center; /* Alinea verticalmente al centro */
+    align-items: center; 
     gap: 15px; 
     margin-bottom: 20px;
     flex-wrap: wrap; 
@@ -369,9 +358,7 @@ footer .redes a, footer .redes span {
     font-size: 1em;
 }
 
-/* =========================================
-   8. PÁGINA CONTACTO
-   ========================================= */
+/* contacto */
 .info-contacto {
     background-color: white;
     width: 90%;
@@ -431,9 +418,7 @@ footer .redes a, footer .redes span {
     border-radius: 8px;
 }
 
-/* =========================================
-   9. MEDIA QUERIES (MÓVIL)
-   ========================================= */
+/* responsive*/
 @media (max-width: 900px) {
     .caja {
         width: 45%; 
