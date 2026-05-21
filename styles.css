@@ -417,55 +417,58 @@ footer .redes a, footer .redes span {
     border: 2px solid #ddd;
     border-radius: 8px;
 }
-nav a:last-child, 
+/* ==========================================================================
+   CAJA DE USUARIO (SOLO CUANDO SÍ ESTÁ CONECTADO)
+   ========================================================================== */
+
+
 nav a[style*="color: #2ecc71"] {
-    background-color: whitesmoke !important; /* Fondo claro para que resalte del rojo del header */
-    color: rgb(114, 1, 1) !important;       /* Texto con tu color corporativo granate */
+    background-color: whitesmoke !important; /* Fondo claro para resaltar del rojo del header */
+    color: rgb(114, 1, 1) !important;       /* Texto granate corporativo */
     padding: 6px 16px !important;
-    border-radius: 5px !important;          /* Bordes un poco redondeados a juego con tus productos */
+    border-radius: 5px !important;          
     font-weight: bold !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     display: inline-block !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
-}
-
-/* Evitar que el efecto hover por defecto de tu nav rompa el color del botón */
-nav a:last-child:hover, 
-nav a[style*="color: #2ecc71"]:hover {
-    color: rgb(114, 1, 1) !important; 
-    background-color: #e0e0e0 !important;   /* Se oscurece un poco el fondo al pasar el ratón */
-}
-
-/* 2. Ajustes específicos para cuando el usuario SÍ está conectado */
-
-/* Nombre del usuario (el que va en verde en el PHP) */
-nav a[style*="color: #2ecc71"] {
-    border-right: 2px solid #ddd !important; /* Una pequeña línea divisoria interna */
-    border-top-right-radius: 0px !important; /* Aplana las esquinas derechas para unirse al botón salir */
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.1) !important;
+    
+    /* Ajustes para fusionarse con el botón de salir */
+    border-right: none !important;           /* Quita el borde derecho */
+    border-top-right-radius: 0px !important; /* Aplana esquinas derechas */
     border-bottom-right-radius: 0px !important;
     margin-right: 0 !important;
 }
 
-/* Botón de Salir (el que va en rojo en el PHP) */
+
+nav a[style*="color: #2ecc71"]:hover {
+    color: rgb(114, 1, 1) !important; 
+    background-color: #e0e0e0 !important;   /* Se oscurece un poco al pasar el ratón */
+}
+
+
 nav a[style*="color: #e74c3c"] {
-    background-color: #333 !important;      /* Fondo oscuro para que contraste con el nombre */
+    background-color: #333 !important;      
     color: white !important;
     padding: 6px 12px !important;
-    border-top-left-radius: 0px !important;  /* Aplana las esquinas izquierdas para pegarse al nombre */
-    border-bottom-left-radius: 0px !important;
-    border-top-right-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
-    margin-left: -5px !important;            /* Elimina el espacio y lo fusiona en una sola caja doble */
     font-size: 0.85em !important;
     display: inline-block !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1) !important;
+    
+    /* Ajustes para pegarse por completo al nombre */
+    border-left: none !important;            /* Quita el borde izquierdo */
+    border-top-left-radius: 0px !important;  /* Aplana esquinas izquierdas */
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 5px !important; /* Mantiene redondeadas las derechas */
+    border-bottom-right-radius: 5px !important;
+    margin-left: -5px !important;            /* Elimina el espacio intermedio */
 }
+
 
 nav a[style*="color: #e74c3c"]:hover {
-    background-color: #d32f2f !important;   /* Se vuelve rojo brillante al querer cerrar sesión */
+    background-color: #d32f2f !important;   /* Rojo brillante al pasar el ratón */
     color: white !important;
 }
-
 /* responsive*/
 @media (max-width: 900px) {
     .caja {
@@ -537,11 +540,10 @@ nav a[style*="color: #e74c3c"]:hover {
     .Nosotros h1 { font-size: 2em; }
 }
 
-nav a:last-child, 
-    nav a[style*="color: #2ecc71"],
+nav a[style*="color: #2ecc71"],
     nav a[style*="color: #e74c3c"] {
         display: block !important;
-        width: 100% !important;
+        width: 100% !important; 
         margin: 5px 0 !important;
         border-radius: 5px !important;       
         text-align: center !important;
