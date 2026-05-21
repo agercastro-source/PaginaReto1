@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,7 +29,7 @@
             <br>
             <button onclick="location.reload()">Reiniciar Juego</button>
            
-            <a href="index.html"><button>Al Inicio</button></a>
+            <a href="index.php"><button>Al Inicio</button></a>
         </section>
     </main>
 

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,16 +12,22 @@
     <header>
         <div class="logo">
             <img src="logo.png" alt="logoempresa">
-            <a class="txtlogo" href="index.html"><h1>PUCHAINA EQUIPMENTS</h1></a>
+            <a class="txtlogo" href="index.php"><h1>PUCHAINA EQUIPMENTS</h1></a>
         </div>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="Productos.html">Productos</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="juego.html">Juego</a>
-            <a href="login.html">Mi Cuenta</a>
-        </nav>
+    <a href="index.php">Inicio</a>
+    <a href="servicios.php">Servicios</a>
+    <a href="Productos.php">Productos</a>
+    <a href="contacto.php">Contacto</a>
+    <a href="juego.php">Juego</a>
+    
+    <?php if (isset($_SESSION['usuario'])): ?>
+        <a href="#" style="color: #2ecc71;"> <?php echo $_SESSION['usuario']; ?></a>
+        <a href="cerrar-sesion.php" style="color: #e74c3c;">(Salir)</a>
+    <?php else: ?>
+        <a href="login.php">Mi Cuenta</a>
+    <?php endif; ?>
+</nav>
     </header>
 
     <main>
@@ -44,7 +51,7 @@
                 </div>
 
                 <div class="caja">
-                    <img src="https://imgs.search.brave.com/dk9k1al_Ae_NdlobugiTQVrU0ms404bxq2DVgUDKahg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93aWtp/bi5lcy93cC1jb250/ZW50L3VwbG9hZHMv/MjAyNC8wMS9IZXJy/YW1pZW50YXMtRXNl/bmNpYWxlcy1wYXJh/LWVsLU1hbnRlbmlt/aWVudG8tSW5mb3Jt/YXRpY28uanBn">
+                    <img src="https://www.querry.com/wp-content/uploads/2022/01/mantenimiento-de-su-sistema-informatico-1024x682.jpg">
                     <h3 class="txtcaja">Mantenimiento informático</h3>
                     <p>Ofrecemos planes de mantenimiento preventivo para empresas y centros educativos.</p>
                 </div>

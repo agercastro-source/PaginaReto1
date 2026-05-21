@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html lang="es">
 <head>
     <title>Servicios - Puchaina Equipments</title>
@@ -8,16 +9,22 @@
  <header>
         <div class="logo">
             <img src="logo.png" alt="logoempresa">
-            <a class="txtlogo" href="index.html"><h1>PUCHAINA EQUIPMENTS</h1></a>
+            <a class="txtlogo" href="index.php"><h1>PUCHAINA EQUIPMENTS</h1></a>
         </div>
-       <nav>
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="Productos.html">Productos</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="juego.html">Juego</a>
-            <a href="login.html">Mi Cuenta</a>
-        </nav>
+        <nav>
+    <a href="index.php">Inicio</a>
+    <a href="servicios.php">Servicios</a>
+    <a href="Productos.php">Productos</a>
+    <a href="contacto.php">Contacto</a>
+    <a href="juego.php">Juego</a>
+    
+    <?php if (isset($_SESSION['usuario'])): ?>
+        <a href="#" style="color: #2ecc71;"> <?php echo $_SESSION['usuario']; ?></a>
+        <a href="cerrar-sesion.php" style="color: #e74c3c;">(Salir)</a>
+    <?php else: ?>
+        <a href="login.php">Mi Cuenta</a>
+    <?php endif; ?>
+</nav>
     </header>
 <body>
     <div class="tarjeta1">

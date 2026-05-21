@@ -417,6 +417,54 @@ footer .redes a, footer .redes span {
     border: 2px solid #ddd;
     border-radius: 8px;
 }
+nav a:last-child, 
+nav a[style*="color: #2ecc71"] {
+    background-color: whitesmoke !important; /* Fondo claro para que resalte del rojo del header */
+    color: rgb(114, 1, 1) !important;       /* Texto con tu color corporativo granate */
+    padding: 6px 16px !important;
+    border-radius: 5px !important;          /* Bordes un poco redondeados a juego con tus productos */
+    font-weight: bold !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    display: inline-block !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
+}
+
+/* Evitar que el efecto hover por defecto de tu nav rompa el color del botón */
+nav a:last-child:hover, 
+nav a[style*="color: #2ecc71"]:hover {
+    color: rgb(114, 1, 1) !important; 
+    background-color: #e0e0e0 !important;   /* Se oscurece un poco el fondo al pasar el ratón */
+}
+
+/* 2. Ajustes específicos para cuando el usuario SÍ está conectado */
+
+/* Nombre del usuario (el que va en verde en el PHP) */
+nav a[style*="color: #2ecc71"] {
+    border-right: 2px solid #ddd !important; /* Una pequeña línea divisoria interna */
+    border-top-right-radius: 0px !important; /* Aplana las esquinas derechas para unirse al botón salir */
+    border-bottom-right-radius: 0px !important;
+    margin-right: 0 !important;
+}
+
+/* Botón de Salir (el que va en rojo en el PHP) */
+nav a[style*="color: #e74c3c"] {
+    background-color: #333 !important;      /* Fondo oscuro para que contraste con el nombre */
+    color: white !important;
+    padding: 6px 12px !important;
+    border-top-left-radius: 0px !important;  /* Aplana las esquinas izquierdas para pegarse al nombre */
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    margin-left: -5px !important;            /* Elimina el espacio y lo fusiona en una sola caja doble */
+    font-size: 0.85em !important;
+    display: inline-block !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
+}
+
+nav a[style*="color: #e74c3c"]:hover {
+    background-color: #d32f2f !important;   /* Se vuelve rojo brillante al querer cerrar sesión */
+    color: white !important;
+}
 
 /* responsive*/
 @media (max-width: 900px) {
@@ -488,3 +536,14 @@ footer .redes a, footer .redes span {
     h2 { font-size: 1.5em; }
     .Nosotros h1 { font-size: 2em; }
 }
+
+nav a:last-child, 
+    nav a[style*="color: #2ecc71"],
+    nav a[style*="color: #e74c3c"] {
+        display: block !important;
+        width: 100% !important;
+        margin: 5px 0 !important;
+        border-radius: 5px !important;       
+        text-align: center !important;
+        border: none !important;
+    }
