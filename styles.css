@@ -417,14 +417,12 @@ footer .redes a, footer .redes span {
     border: 2px solid #ddd;
     border-radius: 8px;
 }
-/* ==========================================================================
-   CAJA DE USUARIO (SOLO CUANDO SÍ ESTÁ CONECTADO)
-   ========================================================================== */
+
 
 
 nav a[style*="color: #2ecc71"] {
-    background-color: whitesmoke !important; /* Fondo claro para resaltar del rojo del header */
-    color: rgb(114, 1, 1) !important;       /* Texto granate corporativo */
+    background-color: whitesmoke !important; 
+    color: rgb(114, 1, 1) !important;       
     padding: 6px 16px !important;
     border-radius: 5px !important;          
     font-weight: bold !important;
@@ -432,9 +430,9 @@ nav a[style*="color: #2ecc71"] {
     display: inline-block !important;
     box-shadow: -2px 2px 5px rgba(0,0,0,0.1) !important;
     
-    /* Ajustes para fusionarse con el botón de salir */
-    border-right: none !important;           /* Quita el borde derecho */
-    border-top-right-radius: 0px !important; /* Aplana esquinas derechas */
+    
+    border-right: none !important;           
+    border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
     margin-right: 0 !important;
 }
@@ -442,7 +440,7 @@ nav a[style*="color: #2ecc71"] {
 
 nav a[style*="color: #2ecc71"]:hover {
     color: rgb(114, 1, 1) !important; 
-    background-color: #e0e0e0 !important;   /* Se oscurece un poco al pasar el ratón */
+    background-color: #e0e0e0 !important;   
 }
 
 
@@ -455,18 +453,18 @@ nav a[style*="color: #e74c3c"] {
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1) !important;
     
-    /* Ajustes para pegarse por completo al nombre */
-    border-left: none !important;            /* Quita el borde izquierdo */
-    border-top-left-radius: 0px !important;  /* Aplana esquinas izquierdas */
+    
+    border-left: none !important;           
+    border-top-left-radius: 0px !important;  
     border-bottom-left-radius: 0px !important;
-    border-top-right-radius: 5px !important; /* Mantiene redondeadas las derechas */
+    border-top-right-radius: 5px !important; 
     border-bottom-right-radius: 5px !important;
-    margin-left: -5px !important;            /* Elimina el espacio intermedio */
+    margin-left: -5px !important;            
 }
 
 
 nav a[style*="color: #e74c3c"]:hover {
-    background-color: #d32f2f !important;   /* Rojo brillante al pasar el ratón */
+    background-color: #d32f2f !important;   
     color: white !important;
 }
 /* responsive*/
